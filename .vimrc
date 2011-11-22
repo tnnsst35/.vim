@@ -33,6 +33,8 @@ set noswapfile
 
 " search
 set smartcase
+set wrapscan
+set hlsearch
 
 " popup
 highlight Pmenu ctermbg=4
