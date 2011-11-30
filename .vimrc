@@ -27,6 +27,9 @@ set list
 highlight JpSpace cterm=underline ctermfg=lightblue guifg=#666666
 au BufNewFile,BufRead,BufNew * match JpSpace /　/
 
+" mouse
+set mouse=a
+
 " file
 set nobackup
 set noswapfile
