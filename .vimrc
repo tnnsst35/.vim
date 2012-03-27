@@ -5,8 +5,6 @@
 syntax on
 colorscheme torte
 
-set encoding=utf-8
-
 set title
 set number
 set autoindent
@@ -27,9 +25,6 @@ set list
 highlight JpSpace cterm=underline ctermfg=lightblue guifg=#666666
 au BufNewFile,BufRead,BufNew * match JpSpace /　/
 
-" mouse
-set mouse=a
-
 " file
 set nobackup
 set noswapfile
@@ -43,10 +38,30 @@ set hlsearch
 highlight Pmenu ctermbg=4
 highlight PmenuSel ctermbg=1
 
+" Auto-completion of parentheses
+inoremap { {}<LEFT>
+inoremap [ []<LEFT>
+inoremap ( ()<LEFT>
+inoremap < <><LEFT>
+inoremap " ""<LEFT>
+inoremap ' ''<LEFT>
+" vnoremap { "zdi^V{<C-R>z}<ESC>
+" vnoremap [ "zdi^V[<C-R>z]<ESC>
+" vnoremap ( "zdi^V(<C-R>z)<ESC>
+" vnoremap " "zdi^V"<C-R>z^V"<ESC>
+" vnoremap ' "zdi'<C-R>z'<ESC>
+
 " Japanese Language
 if has('multi_byte_ime') || has('xim')
 highlight CursorIM guibg=Cyan guifg=NONE
 endif
+
+"""""""
+" PHP "
+"     "
+"""""""
+autocmd BufNewFile,BufRead *.ctp set filetype=php
+let php_htmlInStrings=1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vim-pathogen (https://github.com/tpope/vim-pathogen) "
