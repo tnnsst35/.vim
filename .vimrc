@@ -2,6 +2,8 @@
 " Base settings "
 "               "
 """""""""""""""""
+set nocompatible
+
 syntax on
 colorscheme torte
 
@@ -11,6 +13,7 @@ set autoindent
 set showmatch
 set showmode
 set ruler
+filetype plugin indent on
 
 " tab
 set expandtab
@@ -86,6 +89,7 @@ let g:neocomplcache_enable_underbar_completion = 1
 let g:neocomplcache_min_syntax_length = 3
 
 " Expand keyword with snippet
+let g:neocomplcache_snippets_dir='~/.vim/snippets'
 imap <C-k>     <Plug>(neocomplcache_snippets_expand)
 smap <C-k>     <Plug>(neocomplcache_snippets_expand)
 

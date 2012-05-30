@@ -1,0 +1,26 @@
+# class
+snippet class
+/**
+  * ${1:クラスの説明}
+  */
+class ${2:__CLASS__}
+{
+    /**
+     * ${3:関数の説明}
+     *
+     * @param int    $arg1 引数の説明
+     * @param string $arg2 引数の説明
+     *
+     * @static
+     * @access public
+     * @return string
+     */
+    public static function ${4:__METHOD__}($arg1, $arg2 = null)
+    {
+        if (is_null($arg2)) {
+            $arg2 = (string) $arg1;
+        }
+
+        return $arg2;
+    }
+}
