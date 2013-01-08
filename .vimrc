@@ -17,9 +17,9 @@ filetype plugin indent on
 
 " tab
 set expandtab
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
 
 " space
 set backspace=indent,eol,start
@@ -58,6 +58,10 @@ highlight PmenuSel ctermbg=1
 if has('multi_byte_ime') || has('xim')
 highlight CursorIM guibg=Cyan guifg=NONE
 endif
+
+nnoremap ;b :source $HOME/.bachrc<Return>
+nnoremap ;v :source $HOME/.vimrc<Return>
+nnoremap ;e :VimFiler -split -simple -winwidth=40 -no-quit<Return>
 
 """""""
 " PHP "
